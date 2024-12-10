@@ -1,0 +1,215 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  --first-color: hsl(208, 92%, 54%);
+  --first-color-alt: hsl(208, 88%, 50%);
+  --title-color: hsl(220, 68%, 4%);
+  --text-color: hsl(220, 15%, 66%);
+  --body-color: hsl(0, 0%, 100%);
+  --container-color: hsl(220, 50%, 97%);
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+  /*========== Font and Typography ==========*/
+  --body-font: "Montserrat", system-ui;
+  --big-font-size: 1.5rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+
+  /*========== Font Weight ==========*/
+  --font-regular: 400;
+  --font-semi-bold: 600;
+}
+
+/*=============== GLOBAL STYLES ===============*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--body-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--title-color);
+}
+
+/*=============== CONTAINER STYLES ===============*/
+.container {
+  margin: 30px auto;
+  width: 400px;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/*=============== INCOME-EXPENSE CONTAINER ===============*/
+.inc-exp-container {
+  background-color: var(--container-color);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+/*=============== MONEY STYLES ===============*/
+.money {
+  font-size: var(--big-font-size);
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.money.plus {
+  color: #2ecc71;
+}
+
+.money.minus {
+  color: #c0392b;
+}
+
+/*=============== FORM STYLES ===============*/
+.form-control {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+input[type="text"],
+input[type="number"] {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  padding: 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: var(--container-color);
+  outline: none;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+  border-color: var(--first-color);
+  background-color: var(--body-color);
+}
+
+label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-semi-bold);
+  color: var(--text-color);
+  transform: translateY(-50%);
+  transition: transform 0.3s, font-size 0.3s, color 0.3s;
+  pointer-events: none;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  transform: translateY(-1.5rem);
+  font-size: var(--small-font-size);
+  color: var(--first-color);
+}
+
+/*=============== BUTTON STYLES ===============*/
+.btn {
+  font-family: var(--body-font);
+  cursor: pointer;
+  background-color: var(--first-color);
+  color: var(--body-color);
+  font-weight: var(--font-semi-bold);
+  padding: 0.75rem 1.5rem;
+  border-radius: 2rem;
+  font-size: var(--small-font-size);
+  border: none;
+  display: inline-block;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--first-color-alt);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn:focus {
+  outline: none;
+}
+
+/*=============== LIST STYLES ===============*/
+.list {
+  max-height: 150px;
+  overflow-y: auto;
+  padding: 1 20px;
+  margin-bottom: 40px;
+  list-style: none;
+  position: relative;
+}
+
+.list li {
+  background-color: var(--container-color);
+  box-shadow: var(--box-shadow);
+  color: var(--title-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+}
+
+.list li.plus {
+  border-right: 5px solid #2ecc71;
+}
+
+.list li.minus {
+  border-right: 5px solid #c0392b;
+}
+
+/*=============== DELETE BUTTON STYLES ===============*/
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 5px 10px;
+  position: absolute;
+  top: 50%;
+  left: -40px;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}

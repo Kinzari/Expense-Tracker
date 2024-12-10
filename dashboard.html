@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!--=============== CSS FILE ===============-->
+    <link rel="stylesheet" href="assets/css/dashboardstyles.css" />
+
+    <!--=============== WEB TITLE ===============-->
+    <title>Expense Tracker</title>
+    <link rel="icon" type="image/x-icon" href="assets/img/katana-logo-no-text.ico" />
+  </head>
+  <body>
+    <!--=============== HEADER ===============-->
+    <h2>EXPENSE TRACKER by ESPARTERO</h2>
+
+    <!--=============== MAIN CONTAINER ===============-->
+    <div class="container">
+      <!--========== BALANCE SECTION ==========-->
+      <h4>Your Balance</h4>
+      <h1 id="balance">₱3,500.00</h1>
+
+      <!--========== INCOME AND EXPENSE ==========-->
+      <div class="inc-exp-container">
+        <div>
+          <h4>Income</h4>
+          <p id="money-plus" class="money plus">+₱5,000.00</p>
+        </div>
+        <div>
+          <h4>Expense</h4>
+          <p id="money-minus" class="money minus">-₱1,500.00</p>
+        </div>
+      </div>
+
+      <!--========== TRANSACTION HISTORY ==========-->
+      <h3>History</h3>
+      <ul id="list" class="list">
+        <li class="plus">
+          Salary <span>+₱5,000.00</span>
+          <button class="delete-btn">x</button>
+        </li>
+        <li class="minus">
+          Rent <span>-₱1,000.00</span>
+          <button class="delete-btn">x</button>
+        </li>
+        <li class="minus">
+          Groceries <span>-₱500.00</span>
+          <button class="delete-btn">x</button>
+        </li>
+      </ul>
+
+      <!--========== ADD TRANSACTION FORM ==========-->
+      <h3>Add new transaction</h3>
+      <form id="form">
+        <!-- Text Input -->
+        <div class="form-control">
+          <input type="text" id="text" placeholder=" " required />
+          <label for="text">Text</label>
+        </div>
+
+        <!-- Amount Input -->
+        <div class="form-control">
+          <input type="number" id="amount" placeholder=" " required />
+          <label for="amount"
+            >Amount (negative - expense, positive - income)</label
+          >
+        </div>
+
+        <!-- Submit Button -->
+        <button class="btn" type="button">Add transaction</button>
+      </form>
+
+      <!--========== LINK TO LOGIN ==========-->
+      <p><a href="login.html">Go back to Login</a></p>
+    </div>
+     <!--=============== JAVASCRIPT FILE ===============-->
+     <!-- <script src="assets/js/dashboardscript.js"></script> -->
+  </body>
+</html>

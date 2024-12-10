@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--=============== REMIX ICONS ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+
+    <!--=============== CSS ===============-->
+    <link rel="stylesheet" href="assets/css/loginstyles.css" />
+    <!--=============== WEB TITLE ===============-->
+    <title>Expense Tracker</title>
+    <link
+      rel="icon"
+      type="images/x-icon"
+      href="assets/img/katana-logo-no-text.ico"
+    />
+  </head>
+  <body>
+    <!--=============== LOGIN IMAGE ===============-->
+    <div class="image-container">
+      <img src="assets/img/bgimg.jpg" alt="Right Side Image" />
+    </div>
+
+    <!--=============== LOGIN ===============-->
+    <div class="login container grid">
+      <!-- Radio buttons for toggling views -->
+      <input type="radio" id="showLogin" name="toggle" checked hidden />
+      <input type="radio" id="showRegister" name="toggle" hidden />
+
+      <!--===== LOGIN ACCESS =====-->
+      <div class="login__access">
+        <h1 class="enterprise__title">EXPENSE TRACKER by ESPARTERO</h1>
+        <h1 class="login__title">Log in to your account.</h1>
+
+        <div class="login__area">
+          <form action="dashboard.html" method="GET" class="login__form">
+            <div class="login__content grid">
+              <!--=============== LOGIN USERNAME ===============-->
+              <div class="login__box">
+                <input
+                  type="text"
+                  id="username"
+                  required
+                  placeholder=" "
+                  class="login__input"
+                />
+                <label for="username" class="login__label">Username</label>
+                <i class="ri-user-fill login__icon"></i>
+              </div>
+              <!--=============== LOGIN PASSWORD ===============-->
+              <div class="login__box">
+               <input
+                 type="password"
+                 id="password"
+                 required
+                 placeholder=" "
+                 class="login__input"
+               />
+               <label for="password" class="login__label">Password</label>
+               <i class="ri-eye-off-fill login__icon login__password" id="loginPassword"></i>
+             </div>
+             
+            </div>
+
+            <a href="#" class="login__forgot">Forgot your password?</a>
+
+            <button type="submit" class="login__button">Login</button>
+          </form>
+
+          <p class="login__switch">
+            Don't have an account?
+            <label for="showRegister" class="toggle-link">Create Account</label>
+          </p>
+        </div>
+      </div>
+
+      <!--===== CREATE ACCOUNT =====-->
+      <div class="login__register">
+        <h1 class="enterprise__title">EXPENSE TRACKER by ESPARTERO</h1>
+        <h1 class="login__title">Create new account.</h1>
+
+        <div class="login__area">
+          <form action="" class="login__form">
+            <div class="login__content grid">
+              <!--=============== CREATE FIRST NAME ===============-->
+              <div class="login__box">
+                <input
+                  type="text"
+                  id="firstName"
+                  required
+                  placeholder=" "
+                  class="login__input"
+                />
+                <label for="firstName" class="login__label">First Name</label>
+                <i class="ri-id-card-fill login__icon"></i>
+              </div>
+              <!--=============== CREATE MIDDLE NAME ===============-->
+              <div class="login__box">
+                <input
+                  type="text"
+                  id="middleName"
+                  placeholder=" "
+                  class="login__input"
+                />
+                <label for="middleName" class="login__label"
+                  >Middle Name (Optional)</label
+                >
+                <i class="ri-id-card-fill login__icon"></i>
+              </div>
+              <!--=============== CREATE FAMILY NAME ===============-->
+              <div class="login__box">
+                <input
+                  type="text"
+                  id="familyName"
+                  required
+                  placeholder=" "
+                  class="login__input"
+                />
+                <label for="familyName" class="login__label">Family Name</label>
+                <i class="ri-id-card-fill login__icon"></i>
+              </div>
+              <!--=============== CREATE USERNAME ===============-->
+              <div class="login__box">
+                <input
+                  type="username"
+                  id="usernameCreate"
+                  required
+                  placeholder=" "
+                  class="login__input"
+                />
+                <label for="usernameCreate" class="login__label"
+                  >Username</label
+                >
+                <i class="ri-user-fill login__icon"></i>
+              </div>
+              <!--=============== CREATE PASSWORD ===============-->
+              <div class="login__box">
+               <input
+                 type="password"
+                 id="passwordCreate"
+                 required
+                 placeholder=" "
+                 class="login__input"
+               />
+               <label for="passwordCreate" class="login__label">Password</label>
+               <i
+                 class="ri-eye-off-fill login__icon login__password"
+                 id="loginPasswordCreate"
+               ></i>
+             </div>
+             
+            </div>
+
+            <button type="submit" class="login__button">Create account</button>
+          </form>
+
+          <p class="login__switch">
+            Already have an account?
+            <label for="showLogin" class="toggle-link">Log In</label>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--=============== JAVASCRIPT FILE ===============-->
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
